@@ -7,56 +7,6 @@
     android:orientation="vertical"
     tools:context=".Timer">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/grey">
-
-        <Button
-            android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="RESET"
-            android:textColor="@color/red"
-            android:textSize="30sp" />
-
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TIMER"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:textSize="30sp"/>
-
-
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginRight="15dp"
-            android:background="@null"
-            android:text="START"
-            android:textColor="@color/green"
-            android:textSize="30sp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <TextView
-        android:id="@+id/txtTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:text="00:00:00"
-        android:textColor="@color/black"
-        android:textSize="60sp" />
 
 
 </LinearLayout>
