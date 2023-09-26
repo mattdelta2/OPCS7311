@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.ImageButton
 
 class Timer : AppCompatActivity() {
 
@@ -17,9 +18,9 @@ class Timer : AppCompatActivity() {
 
 
         val timerTextView = findViewById<TextView>(R.id.timerTextView)
-        val startButton = findViewById<Button>(R.id.startButton)
-        val stopButton = findViewById<Button>(R.id.stopButton)
-        val restartButton = findViewById<Button>(R.id.restartButton)
+        val startButton = findViewById<ImageButton>(R.id.btnStart)
+        val stopButton = findViewById<ImageButton>(R.id.btnStop)
+        val restartButton = findViewById<ImageButton>(R.id.btnRestart)
         var isTimerRunning = false
         var elapsedMillis = 0L
         var timer: CountUpTimer? = null
