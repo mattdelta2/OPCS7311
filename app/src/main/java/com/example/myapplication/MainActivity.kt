@@ -1,20 +1,17 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
-import android.widget.ImageButton
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        val loginButton = findViewById<ImageButton>(R.id.btnLogin)
+        val loginButton = findViewById<Button>(R.id.btm_Login)
 
         loginButton.setOnClickListener()
         {

@@ -6,70 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
-    <ImageButton
+    <Button
         android:id="@+id/btnTimer"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="52dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/timerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="207dp"
+        android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnTimer4"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="328dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/timerbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnTimer6"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="516dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/timerbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnTimer5"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="428dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/timerbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnCategory"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="152dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/category"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnProgress"
-        android:layout_width="86dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="244dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/listbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
