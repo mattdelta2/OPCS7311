@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".MainMenu">
 
     <ImageButton
@@ -19,3 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/category" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    tools:context=".MainMenu"/>
+>>>>>>> parent of 66d9c21 (adding a timer)
