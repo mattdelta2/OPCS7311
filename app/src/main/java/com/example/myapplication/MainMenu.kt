@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 
 class MainMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,11 +13,12 @@ class MainMenu : AppCompatActivity() {
 
 
 
-        val timerButton = findViewById<Button>(R.id.btnTimer)
+        val timerButton = findViewById<ImageButton>(R.id.btnTimer)
 
         timerButton.setOnClickListener()
         {
             val intent = Intent(this, Timer::class.java)
+            startActivity(intent)
         }
 
 
