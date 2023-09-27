@@ -1,12 +1,18 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
 class AllWork : AppCompatActivity() {
+
+
+    private lateinit var backButton: Button
+
 
     // In your getSavedTimesheetEntries function
     private fun getSavedTimesheetEntries(): List<TimesheetEntry> {
@@ -32,5 +38,17 @@ class AllWork : AppCompatActivity() {
         // Initialize and set the adapter for the RecyclerView
         val adapter = TimesheetEntryAdapter(timesheetEntries)
         entriesRecyclerView.adapter = adapter
+        backButton.setOnClickListener{(back())}
+
+
+
+
+
+    }
+    private fun back()
+    {
+        val intent = Intent(this, MainMenu::class.java)
+        startActivity(intent)
+        finish()
     }
 }
