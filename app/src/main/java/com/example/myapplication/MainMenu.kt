@@ -53,7 +53,7 @@ class MainMenu : AppCompatActivity() {
 
         categoryButton.setOnClickListener()
         {
-            val intent = Intent(this, Category::class.java)
+            val intent = Intent(this, MainActivity::class.java)
 
             startActivity(intent)
         }
