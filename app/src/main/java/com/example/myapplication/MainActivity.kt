@@ -1,10 +1,12 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var endTimeEditText : EditText
     private lateinit var descriptionEditText: EditText
 
+    private lateinit var backButton: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         categoryContainer = findViewById(R.id.categoryContainer)
         addCategoryButton = findViewById(R.id.addCategoryButton)
         categoryNameEditText = findViewById(R.id.categoryNameEditText)
+        backButton = findViewById(R.id.btnBack)
 
         // In onCreate method
         val categorySpinner = findViewById<Spinner>(R.id.categorySpinner)
@@ -71,6 +76,12 @@ class MainActivity : AppCompatActivity() {
                 descriptionEditText.text.clear()
 
             }
+        }
+        backButton.setOnClickListener()
+        {
+            val intent = Intent(this, MainMenu::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

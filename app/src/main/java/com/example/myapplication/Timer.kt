@@ -15,7 +15,7 @@ class Timer : AppCompatActivity() {
     private lateinit var startButton: ImageButton
     private lateinit var stopButton: ImageButton
     private lateinit var restartButton: ImageButton
-    private lateinit var backButton: Button
+    private lateinit var backButton: ImageButton
 
     private var isTimerRunning = false
     private var elapsedTime: Long = 0
