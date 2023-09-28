@@ -6,17 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".Shop">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="301dp"
-        android:layout_height="89dp"
-        android:text="Shop"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textIsSelectable="false"
-        android:textSize="60sp"
-        android:textStyle="normal|bold|italic"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="5dp" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="100dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="488dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buybutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="372dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buybutton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shopbanner2" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="102dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="272dp"
+        android:layout_marginBottom="248dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buybutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="103dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/buybutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
