@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Shop">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="379dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="612dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/shopbanner2" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/buybutton"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/buybutton"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/buybutton"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        app:srcCompat="@drawable/buybutton"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="580dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
