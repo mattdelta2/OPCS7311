@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Shop">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="301dp"
+        android:layout_height="89dp"
+        android:text="Shop"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textIsSelectable="false"
+        android:textSize="60sp"
+        android:textStyle="normal|bold|italic"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="5dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
