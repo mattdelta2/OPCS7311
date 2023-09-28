@@ -14,12 +14,14 @@ class MainMenu : AppCompatActivity() {
 
 
 
+
         val timerButton = findViewById<ImageButton>(R.id.btnTimer)
 
         timerButton.setOnClickListener()
         {
-            val intent = Intent(this, Timer::class.java)
+            val intent = Intent(this,Timer::class.java)
             startActivity(intent)
+            finish()
         }
 
         val listButton = findViewById<ImageButton>(R.id.btnList )
@@ -29,6 +31,7 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, AllWork::class.java)
 
             startActivity(intent)
+            finish()
         }
 
         val roomButton = findViewById<ImageButton>(R.id.btnRoom )
@@ -38,6 +41,7 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, PlayerRoom::class.java)
 
             startActivity(intent)
+            finish()
         }
 
         val shopButton = findViewById<ImageButton>(R.id.btnShop )
@@ -47,6 +51,7 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, Shop::class.java)
 
             startActivity(intent)
+            finish()
         }
 
         val categoryButton = findViewById<ImageButton>(R.id.btnCategory )
@@ -56,6 +61,7 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
 
             startActivity(intent)
+            finish()
         }
 
         val dateButton = findViewById<ImageButton>(R.id.btnDate )
@@ -65,6 +71,7 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, Date::class.java)
 
             startActivity(intent)
+            finish()
         }
 
 

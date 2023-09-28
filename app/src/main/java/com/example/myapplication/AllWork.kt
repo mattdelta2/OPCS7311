@@ -5,13 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 
 class AllWork : AppCompatActivity() {
 
 
-    private lateinit var backButton: Button
+    private lateinit var backButton: ImageButton
 
 
     // In your getSavedTimesheetEntries function
