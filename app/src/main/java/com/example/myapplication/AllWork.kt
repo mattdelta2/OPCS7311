@@ -15,16 +15,7 @@ class AllWork : AppCompatActivity() {
 
 
     // In your getSavedTimesheetEntries function
-    private fun getSavedTimesheetEntries(): List<TimesheetEntry> {
-        val gson = Gson()
-        val sharedPreferences = getSharedPreferences("TimesheetEntries", Context.MODE_PRIVATE)
-        val entriesSet =
-            sharedPreferences.getStringSet("timesheet_entries", mutableSetOf()) ?: mutableSetOf()
 
-        // Convert the set of JSON strings back to a list of TimesheetEntry objects
-
-        return entriesSet.mapNotNull { gson.fromJson(it, TimesheetEntry::class.java) }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +35,22 @@ class AllWork : AppCompatActivity() {
 
 
 
+    }
+
+    private fun getSavedTimesheetEntries(): List<TimesheetEntry> {
+        val sharedPreferences = getSharedPreferences("TimesheetEntries", Context.MODE_PRIVATE)
+        val gson = Gson()
+        val entriesSet = sharedPreferences.getStringSet("timesheet_entries", setOf()) ?: setOf()
+
+        // Convert the entriesSet back to a list of TimesheetEntry
+        val timesheetEntries = entriesSet.mapNotNull {
+            try {
+                gson.fromJson(it, TimesheetEntry::class.java)
+            } catch (e: Exception) {
+                null
+            }
+        }
+        return timesheetEntries
     }
     private fun back()
     {
