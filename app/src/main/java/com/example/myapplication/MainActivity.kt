@@ -1,10 +1,8 @@
 package com.example.myapplication
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -50,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         categoryContainer = findViewById(R.id.categoryContainer)
         addCategoryButton = findViewById(R.id.addCategoryButton)
         categoryNameEditText = findViewById(R.id.categoryNameEditText)
-        backButton = findViewById(R.id.btnBack)
+        backButton = findViewById(R.id.backBTN)
 
         // In onCreate method
         val categoryImageView = findViewById<ImageView>(R.id.userImage)

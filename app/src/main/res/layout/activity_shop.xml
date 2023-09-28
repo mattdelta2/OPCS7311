@@ -8,7 +8,7 @@
     tools:context=".Shop">
 
     <ImageView
-        android:id="@+id/btnBack"
+        android:id="@+id/backBTN"
         android:layout_width="117dp"
         android:layout_height="126dp"
         android:layout_marginStart="9dp"
