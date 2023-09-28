@@ -1,11 +1,14 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Spinner
@@ -35,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var startTimeEditText: EditText
     private lateinit var endTimeEditText : EditText
     private lateinit var descriptionEditText: EditText
+    private val SELECT_IMAGE_REQUEST_CODE = 1001
 
     private lateinit var backButton: ImageButton
 
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         backButton = findViewById(R.id.btnBack)
 
         // In onCreate method
+        val categoryImageView = findViewById<ImageView>(R.id.userImage)
         val categorySpinner = findViewById<Spinner>(R.id.categorySpinner)
         val categories = categoryManager.getCategories().map { it.name }
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categories)
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             val endTime = endTimeEditText.text.toString()
             val description = descriptionEditText.text.toString()
             val selectedCategory = categorySpinner.selectedItem.toString()
+            val userImage = categoryManager.selectImageForCategory(this, SELECT_IMAGE_REQUEST_CODE)
 
             if (date.isNotEmpty() && startTime.isNotEmpty() && endTime.isNotEmpty() && description.isNotEmpty()) {
                 val timesheetEntry = TimesheetEntry(date, startTime, endTime, description, selectedCategory)

@@ -46,6 +46,15 @@
         android:layout_height="wrap_content"
         android:hint="Description" />
 
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_timescape"
+        android:clickable="true"
+        android:onClick="onImageViewClick"
+        android:contentDescription="Click to add an image" />
+
     <Spinner
         android:id="@+id/categorySpinner"
         android:layout_width="match_parent"
