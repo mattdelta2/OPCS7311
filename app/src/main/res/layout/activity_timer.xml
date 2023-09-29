@@ -31,6 +31,8 @@
         android:layout_marginStart="3dp"
         android:layout_marginBottom="208dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         android:src="@drawable/startbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,9 +42,11 @@
         android:layout_width="94dp"
         android:layout_height="133dp"
 
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="212dp"
         android:background="#007339D3"
+        android:scaleX="2"
+        android:scaleY="2"
         android:src="@drawable/restartbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/stopButton" />
@@ -52,9 +56,11 @@
         android:layout_width="117dp"
         android:layout_height="134dp"
 
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="212dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         android:src="@drawable/stopbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/startButton" />
@@ -63,9 +69,11 @@
         android:id="@+id/backBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
