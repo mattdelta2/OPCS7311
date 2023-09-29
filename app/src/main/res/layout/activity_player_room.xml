@@ -5,6 +5,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="#7339D3"
     tools:context=".PlayerRoom">
 
@@ -19,3 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    tools:context=".PlayerRoom"/>
+>>>>>>> Stashed changes
