@@ -58,22 +58,32 @@ class Date : AppCompatActivity() {
     }
 
     private fun calculateTotalDuration(category: String, startDate: String, endDate: String): Long {
-        // TODO: Implement filtering and calculation logic here
-        // Get timesheet entries matching the category and date range, then calculate the total duration.
         val matchingEntries = getMatchingTimesheetEntries(category, startDate, endDate)
         return calculateTotalDurationMillis(matchingEntries)
     }
 
-    private fun getMatchingTimesheetEntries(category: String, startDate: String, endDate: String): List<TimesheetEntry> {
-        // TODO: Filter timesheet entries matching the category and date range.
-        // Replace this with your actual filtering logic.
-        return emptyList()
+    private fun calculateTotalDurationMillis(entries: List<TimesheetEntry>): Long {
+        // Calculate the total duration in milliseconds
+        return entries.sumBy { entry ->
+            calculateDurationMillis(entry.startTime, entry.endTime)
+        }
     }
 
-    private fun calculateTotalDurationMillis(entries: List<TimesheetEntry>): Long {
-        // TODO: Calculate the total duration in milliseconds.
-        // Replace this with your actual duration calculation logic.
-        return 0
+    private fun getMatchingTimesheetEntries(category: String, startDate: String, endDate: String): List<TimesheetEntry> {
+
+        return TimesheetEntry.filter { entry ->
+            entry.date >= startDate && entry.date <= endDate && entry.category == category
+        }
+    }
+
+    private fun calculateDurationMillis(startTime: List<TimesheetEntry>, endTime: String): Long {
+        // Assuming 'startTime' and 'endTime' are in the format "HH:mm AM/PM"
+        val dateFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+        val startDateTime = dateFormat.parse(startTime.toString())
+        val endDateTime = dateFormat.parse(endTime)
+
+        // Calculate the duration in milliseconds
+        return endDateTime.time - startDateTime.time
     }
 
     private fun formatMillisToHours(millis: Long): String {

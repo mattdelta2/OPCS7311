@@ -17,14 +17,7 @@ import com.google.gson.Gson
 
 class CategoryName(val id: Int, val name: String)
 
-data class TimesheetEntry(
-    val date: String,
-    val startTime: String,
-    val endTime: String,
-    val description: String,
-    val imageUrl: String?
 
-)
 
 class MainActivity : AppCompatActivity() {
 
