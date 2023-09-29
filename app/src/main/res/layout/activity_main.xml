@@ -57,12 +57,13 @@
         android:src="@mipmap/ic_timescape" />
 
 
-
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="105dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         android:src="@drawable/backbutton" />
 
 

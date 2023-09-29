@@ -15,6 +15,8 @@
         android:layout_marginStart="9dp"
         android:layout_marginTop="2dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
@@ -23,10 +25,15 @@
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#7744D1"
-        app:srcCompat="@drawable/buybutton"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="175dp" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#007744D1"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/buybutton" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -42,44 +49,61 @@
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
-        android:backgroundTint="#7842D6"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="356dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#007842D6"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/buybutton"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/buybutton" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="91dp"
-        android:backgroundTint="#753ED6"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="164dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00753ED6"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/buybutton"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/buybutton" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/opensourceheadphones"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="184dp" />
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/opensourceheadphones" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/opensourcepotplant"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="371dp" />
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/opensourcepotplant" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/opensourceteddybear"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="560dp" />
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/opensourceteddybear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
