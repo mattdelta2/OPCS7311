@@ -31,6 +31,50 @@ class MainMenu : AppCompatActivity() {
             val intent = Intent(this, Timer::class.java)
 
             startActivity(intent)
+<<<<<<< Updated upstream
+=======
+            finish()
+        }
+
+        val roomButton = findViewById<ImageButton>(R.id.btnRoom )
+
+        roomButton.setOnClickListener()
+        {
+            val intent = Intent(this, PlayerRoom::class.java)
+
+            startActivity(intent)
+            finish()
+        }
+
+        val shopButton = findViewById<ImageButton>(R.id.btnShop )
+
+        shopButton.setOnClickListener()
+        {
+            val intent = Intent(this, Shop::class.java)
+
+            startActivity(intent)
+            finish()
+        }
+
+        val categoryButton = findViewById<ImageButton>(R.id.btnCategory )
+
+        categoryButton.setOnClickListener()
+        {
+            val intent = Intent(this, MainActivity::class.java)
+
+            startActivity(intent)
+            finish()
+        }
+
+        val dateButton = findViewById<ImageButton>(R.id.btnDate )
+
+        dateButton.setOnClickListener()
+        {
+            val intent = Intent(this, Date::class.java)
+
+            startActivity(intent)
+            finish()
+>>>>>>> Stashed changes
         }
 
 
