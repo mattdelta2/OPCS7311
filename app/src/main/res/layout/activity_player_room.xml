@@ -9,62 +9,79 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="413dp"
-        android:layout_height="734dp"
-        app:srcCompat="@drawable/lofi_girl_copy"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        android:layout_width="277dp"
+        android:layout_height="454dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/lofi_girl_copy" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="113dp"
         android:layout_height="95dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="144dp"
         android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/backbutton"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="567dp" />
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/backbutton" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/Shopbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="144dp"
         android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/shopbutton"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="567dp" />
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:srcCompat="@drawable/shopbutton" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="366dp"
-        android:layout_height="210dp"
-        app:srcCompat="@drawable/roombutton"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="7dp" />
+        android:layout_width="139dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="124dp"
+        android:scaleX="3"
+        android:scaleY="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/roombutton" />
+
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/Timerbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="144dp"
         android:backgroundTint="#00FFFFFF"
-        app:srcCompat="@drawable/timerbutton"
-        tools:layout_editor_absoluteX="284dp"
-        tools:layout_editor_absoluteY="567dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-<<<<<<< Updated upstream
-    android:background="#7339D3"
-    tools:context=".PlayerRoom">
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/timerbutton" />
 
     <ImageButton
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
+        android:scaleX="2"
+        android:scaleY="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/backbutton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-=======
-    tools:context=".PlayerRoom"/>
->>>>>>> Stashed changes
+
