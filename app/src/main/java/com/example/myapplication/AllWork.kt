@@ -15,7 +15,7 @@ class AllWork : AppCompatActivity() {
     private lateinit var backButton: ImageButton
 
 
-    // In your getSavedTimesheetEntries function
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
