@@ -5,6 +5,51 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAEE83">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
+        app:srcCompat="@drawable/lofi_girl_copy"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-3dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="113dp"
+        android:layout_height="95dp"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/backbutton"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="567dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/shopbutton"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="567dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="366dp"
+        android:layout_height="210dp"
+        app:srcCompat="@drawable/roombutton"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:srcCompat="@drawable/timerbutton"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="567dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 <<<<<<< Updated upstream
     android:background="#7339D3"
     tools:context=".PlayerRoom">
