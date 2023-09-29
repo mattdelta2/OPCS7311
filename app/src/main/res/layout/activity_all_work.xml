@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="492dp" />
+        tools:layout_editor_absoluteY="161dp" />
 
     <ImageButton
         android:id="@+id/backBTN"

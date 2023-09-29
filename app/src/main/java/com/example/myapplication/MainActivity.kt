@@ -4,26 +4,25 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ImageButton
 import android.widget.LinearLayout
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 
-class CategoryName(val id: Int, val name: String) {
-
-}
+class CategoryName(val id: Int, val name: String)
 
 data class TimesheetEntry(
     val date: String,
     val startTime: String,
     val endTime: String,
     val description: String,
+    val imageUrl: String?
 
 )
 
@@ -79,10 +78,10 @@ class MainActivity : AppCompatActivity() {
             val endTime = endTimeEditText.text.toString()
             val description = descriptionEditText.text.toString()
 
-            val userImage = categoryManager.selectImageForCategory(this, SELECT_IMAGE_REQUEST_CODE)
+          //  val userImage = categoryManager.selectImageForCategory(this, SELECT_IMAGE_REQUEST_CODE)
 
             if (date.isNotEmpty() && startTime.isNotEmpty() && endTime.isNotEmpty() && description.isNotEmpty()) {
-                val timesheetEntry = TimesheetEntry(date, startTime, endTime, description )
+                val timesheetEntry = TimesheetEntry(date, startTime, endTime, description, imageUrl = null )
 
                 // Call a function to save the timesheet entry
                 saveTimesheetEntry(timesheetEntry)
@@ -145,6 +144,7 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences.edit().putStringSet("timesheet_entries", updatedEntriesSet).apply()
     }
 
+
     private fun getSavedTimesheetEntries(): MutableSet<String> {
         // Retrieve the list of saved entries from shared preferences
         val sharedPreferences = getSharedPreferences("TimesheetEntries", Context.MODE_PRIVATE)
@@ -168,6 +168,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         categoryContainer.addView(newCategoryTextView)
+    }
+
+
+    fun onImageViewClick(view: View)
+    {
+
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+        intent.type = "image/*"
+        startActivityForResult(intent, SELECT_IMAGE_REQUEST_CODE)
+
     }
 }
 
