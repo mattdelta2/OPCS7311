@@ -30,6 +30,8 @@ class AllWork : AppCompatActivity() {
         // Initialize and set the adapter for the RecyclerView
         val adapter = TimesheetEntryAdapter(timesheetEntries)
         entriesRecyclerView.adapter = adapter
+
+        backButton = findViewById(R.id.backBTN)
         backButton.setOnClickListener{(back())}
 
 

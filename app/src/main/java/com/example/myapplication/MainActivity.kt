@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -23,7 +24,7 @@ data class TimesheetEntry(
     val startTime: String,
     val endTime: String,
     val description: String,
-    val category: String
+
 )
 
 class MainActivity : AppCompatActivity() {
@@ -40,23 +41,36 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var backButton: ImageButton
 
+    private val PREFS_NAME = "MyPrefsFile"
+    private val FIRST_LAUNCH = "first_launch"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         categoryManager = CategoryManager(applicationContext)
         categoryContainer = findViewById(R.id.categoryContainer)
         addCategoryButton = findViewById(R.id.addCategoryButton)
         categoryNameEditText = findViewById(R.id.categoryNameEditText)
-        backButton = findViewById(R.id.backBTN)
+        backButton = findViewById(R.id.btnBack)
+        entryDateEditText = findViewById(R.id.entryDateEditText)
+        startTimeEditText = findViewById(R.id.startTimeEditText)
+        endTimeEditText = findViewById(R.id.endTimeEditText)
+        descriptionEditText = findViewById(R.id.descriptionEditText)
+
+
+
+
 
         // In onCreate method
         val categoryImageView = findViewById<ImageView>(R.id.userImage)
-        val categorySpinner = findViewById<Spinner>(R.id.categorySpinner)
+
         val categories = categoryManager.getCategories().map { it.name }
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categories)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        categorySpinner.adapter = adapter
+
 
 
         addCategoryButton.setOnClickListener {
@@ -64,11 +78,11 @@ class MainActivity : AppCompatActivity() {
             val startTime = startTimeEditText.text.toString()
             val endTime = endTimeEditText.text.toString()
             val description = descriptionEditText.text.toString()
-            val selectedCategory = categorySpinner.selectedItem.toString()
+
             val userImage = categoryManager.selectImageForCategory(this, SELECT_IMAGE_REQUEST_CODE)
 
             if (date.isNotEmpty() && startTime.isNotEmpty() && endTime.isNotEmpty() && description.isNotEmpty()) {
-                val timesheetEntry = TimesheetEntry(date, startTime, endTime, description, selectedCategory)
+                val timesheetEntry = TimesheetEntry(date, startTime, endTime, description )
 
                 // Call a function to save the timesheet entry
                 saveTimesheetEntry(timesheetEntry)
@@ -78,6 +92,18 @@ class MainActivity : AppCompatActivity() {
                 startTimeEditText.text.clear()
                 endTimeEditText.text.clear()
                 descriptionEditText.text.clear()
+
+                val prefs: SharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                val isFirstLaunch = prefs.getBoolean(FIRST_LAUNCH, true)
+
+                if (isFirstLaunch) {
+                    // Clear the JSON file or perform any other first-launch actions
+                    clearJsonFile()
+
+                    // Mark that it's no longer the first launch
+                    prefs.edit().putBoolean(FIRST_LAUNCH, false).apply()
+                }
+
 
             }
         }
@@ -89,6 +115,19 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+    private fun clearJsonFile() {
+        try {
+            val filename = "your_json_file_name.json"
+            val outputStreamWriter = openFileOutput(filename, Context.MODE_PRIVATE)
+            outputStreamWriter.write("{}".toByteArray()) // Overwrite with an empty JSON object
+            outputStreamWriter.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 
     private fun saveTimesheetEntry(entry: TimesheetEntry) {
         // Retrieve the existing list of saved entries from shared preferences

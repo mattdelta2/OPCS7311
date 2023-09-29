@@ -13,6 +13,8 @@ class Date : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_date)
 
+        backButton = findViewById(R.id.backBTN)
+
         backButton.setOnClickListener{(back())}
 
     }

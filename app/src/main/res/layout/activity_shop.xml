@@ -7,7 +7,7 @@
     android:background="#7339D3"
     tools:context=".Shop">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/backBTN"
         android:layout_width="117dp"
         android:layout_height="126dp"

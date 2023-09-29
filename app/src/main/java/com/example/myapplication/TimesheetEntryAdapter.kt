@@ -32,7 +32,7 @@ class TimesheetEntryAdapter(private val entries: List<TimesheetEntry>) :
         startTimeTextView.text = "Start Time: ${entry.startTime}"
         endTimeTextView.text = "End Time: ${entry.endTime}"
         descriptionTextView.text = "Description: ${entry.description}"
-        categoryTextView.text = "Category: ${entry.category}"
+
 
 
 
